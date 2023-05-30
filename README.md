@@ -29,3 +29,9 @@ sam local start-api 2>&1 | tr "\r" "\n"
 ```
 
 and open [http://localhost:3000/123456](http://localhost:3000/123456) in your browser
+
+### TODO:
+
+- [ ] determine why `onMount` is not called in the client after SSR. When using `npm run dev` directly we can see that it is called (via `dev` the background changes, via SSR it does not)
+- [ ] determine why `root.css` is not imported when run via `SSR`. It only works when run via `npm run dev`. When importing as a named import it works for both
+- [ ] figure out how to tell rollup that `@aws-sdk/client-dynamodb` is an external dependency, since it is available per default in lambda environment (so it does not need to be bundled)

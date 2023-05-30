@@ -16,6 +16,8 @@
     "vite": "^4.1.4"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.341.0",
+    "@aws-sdk/lib-dynamodb": "^3.341.0",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.8.2",
     "patch-package": "^7.0.0",
