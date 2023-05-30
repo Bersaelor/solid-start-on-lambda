@@ -15,7 +15,7 @@ Globals:
         DEV_TABLE: example-dynamodb-table
         
 Resources:
-  HelloWorldFunction:
+  TestSSRFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       CodeUri: solid-site/dist/server
@@ -37,9 +37,9 @@ Outputs:
   HelloWorldApi:
     Description: "API Gateway endpoint URL for Prod stage for Hello World function"
     Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
-  HelloWorldFunction:
-    Description: "Hello World Lambda Function ARN"
-    Value: !GetAtt HelloWorldFunction.Arn
+  TestSSRFunction:
+    Description: "TestSSRFunction ARN"
+    Value: !GetAtt TestSSRFunction.Arn
   HelloWorldFunctionIamRole:
     Description: "Implicit IAM Role created for Hello World function"
     Value: !GetAtt HelloWorldFunctionRole.Arn
